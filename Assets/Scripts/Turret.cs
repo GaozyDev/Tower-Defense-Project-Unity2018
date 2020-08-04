@@ -47,7 +47,7 @@ public class Turret : MonoBehaviour
 
     void Attack()
     {
-        print("attack");
-        GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+        GameObject bullet = GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+        bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
     }
 }
