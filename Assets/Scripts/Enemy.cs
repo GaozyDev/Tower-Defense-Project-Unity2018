@@ -45,6 +45,5 @@ public class Enemy : MonoBehaviour
     void OnDestroy()
     {
         EnemySpawner.CountEnemyAlive--;
-        print(EnemySpawner.CountEnemyAlive);
     }
 }

@@ -6,19 +6,12 @@ public class MapCube : MonoBehaviour
 {
     [HideInInspector]
     public GameObject turretGo;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
+    public GameObject buildEffect;
 
     public void BuildTurret(GameObject turretPrefab)
     {
-
+        turretGo = GameObject.Instantiate(turretPrefab, transform.position, Quaternion.identity);
+        GameObject effect = GameObject.Instantiate(buildEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 1);
     }
 }

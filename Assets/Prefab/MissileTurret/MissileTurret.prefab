@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3394854844040939328}
   - component: {fileID: 3394854844042266466}
   - component: {fileID: 3394854844043232674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3394854844040939330}
   - component: {fileID: 3394854844042266468}
   - component: {fileID: 3394854844043232676}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,8 +165,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3394854844040939332}
-  m_Layer: 0
-  m_Name: MissileTurret 1
+  m_Layer: 11
+  m_Name: MissileTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

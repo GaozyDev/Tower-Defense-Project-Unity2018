@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9056869067477573408}
   - component: {fileID: 9056869067474673410}
   - component: {fileID: 9056869067475672514}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,8 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9056869067477573410}
-  m_Layer: 0
-  m_Name: StandardTurret Upgraded
+  m_Layer: 11
+  m_Name: StandardTurretUpgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 9056869067477573414}
   - component: {fileID: 9056869067474673408}
   - component: {fileID: 9056869067475672512}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

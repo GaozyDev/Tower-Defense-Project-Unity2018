@@ -104,3 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffd7e68ce058d947bc32a7a2bc25f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretGo: {fileID: 0}
+  buildEffect: {fileID: 6687712111317155653, guid: 5e0b5a408e43cf5479f56b711e2e8635,
+    type: 3}

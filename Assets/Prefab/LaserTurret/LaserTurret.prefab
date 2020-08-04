@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5745663467913047177}
-  m_Layer: 0
-  m_Name: LaserTurret 1
+  m_Layer: 11
+  m_Name: LaserTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5745663467913047179}
   - component: {fileID: 5745663467911720105}
   - component: {fileID: 5745663467910622825}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5745663467913047181}
   - component: {fileID: 5745663467911720107}
   - component: {fileID: 5745663467910622827}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3726199018369898625}
-  m_Layer: 0
-  m_Name: MissileTurretUpgraded 1
+  m_Layer: 11
+  m_Name: MissileTurretUpgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3726199018369898629}
   - component: {fileID: 3726199018371192999}
   - component: {fileID: 3726199018372323943}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 3726199018369898631}
   - component: {fileID: 3726199018371192993}
   - component: {fileID: 3726199018372323937}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

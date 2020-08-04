@@ -2,16 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class BuildManager : MonoBehaviour
 {
     public TurretData laserTurretData;
+    public Text laserMoneyText;
     public TurretData missileTurretData;
+    public Text missileMoneyText;
     public TurretData standardTurretData;
+    public Text standardMoneyText;
+    public Text moneyText;
+    public Animator moneyAnimator;
 
     private TurretData selectedTurretData;
+    private int money = 1000;
 
-    public int money = 1000;
+    void Start()
+    {
+        laserMoneyText.text = laserTurretData.cost.ToString();
+        missileMoneyText.text = missileTurretData.cost.ToString();
+        standardMoneyText.text = standardTurretData.cost.ToString();
+    }
 
     void Update()
     {
@@ -25,21 +37,21 @@ public class BuildManager : MonoBehaviour
                 if (isCollider)
                 {
                     MapCube mapCube = hit.collider.GetComponent<MapCube>();
-                    if (mapCube.turretGo == null)
+                    if (selectedTurretData != null && mapCube.turretGo == null)
                     {
-                        if (money > selectedTurretData.cost)
+                        if (money >= selectedTurretData.cost)
                         {
-                            money -= selectedTurretData.cost;
+                            ChangeMoney(-selectedTurretData.cost);
                             mapCube.BuildTurret(selectedTurretData.turretPrefab);
                         }
                         else
                         {
-
+                            moneyAnimator.SetTrigger("Flicker");
                         }
                     }
-                    else
+                    else if (mapCube.turretGo != null)
                     {
-                        
+
                     }
                 }
             }
@@ -68,5 +80,11 @@ public class BuildManager : MonoBehaviour
         {
             selectedTurretData = standardTurretData;
         }
+    }
+
+    void ChangeMoney(int change = 0)
+    {
+        money += change;
+        moneyText.text = "￥" + money;
     }
 }
