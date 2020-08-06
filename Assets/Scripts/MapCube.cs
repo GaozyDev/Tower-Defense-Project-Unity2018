@@ -8,7 +8,9 @@ public class MapCube : MonoBehaviour
     [HideInInspector]
     public GameObject turretGo;
     public GameObject buildEffect;
-
+    [HideInInspector]
+    public bool isUpgraded = false;
+    
     private Renderer _renderer;
 
     void Start()
@@ -18,6 +20,7 @@ public class MapCube : MonoBehaviour
 
     public void BuildTurret(GameObject turretPrefab)
     {
+        isUpgraded = false;
         turretGo = GameObject.Instantiate(turretPrefab, transform.position, Quaternion.identity);
         GameObject effect = GameObject.Instantiate(buildEffect, transform.position, Quaternion.identity);
         Destroy(effect, 1);

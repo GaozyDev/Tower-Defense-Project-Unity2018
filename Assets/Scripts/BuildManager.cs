@@ -14,19 +14,23 @@ public class BuildManager : MonoBehaviour
     public Text standardMoneyText;
     public Text moneyText;
     public Animator moneyAnimator;
+    public GameObject upgradeCanvas;
+    public Button buttonUpgrade;
+
     private int money = 1000;
-
     private static BuildManager _instance;
-
     private TurretData selectedTurretData;
+    private GameObject selectedTurretGo;
 
-    public static BuildManager Ins(){
+    public static BuildManager Ins()
+    {
         return _instance;
     }
-    
-	protected virtual void Awake() {
-		_instance = this;
-	}
+
+    protected virtual void Awake()
+    {
+        _instance = this;
+    }
 
     void Start()
     {
@@ -61,7 +65,15 @@ public class BuildManager : MonoBehaviour
                     }
                     else if (mapCube.turretGo != null)
                     {
-
+                        if (mapCube.turretGo == selectedTurretGo && upgradeCanvas.activeInHierarchy)
+                        {
+                            HideUpgradeUI();
+                        }
+                        else
+                        {
+                            selectedTurretGo = mapCube.turretGo;
+                            ShowUpgradeUI(mapCube.transform.position, mapCube.isUpgraded);
+                        }
                     }
                 }
             }
@@ -96,5 +108,27 @@ public class BuildManager : MonoBehaviour
     {
         money += change;
         moneyText.text = "￥" + money;
+    }
+
+    void ShowUpgradeUI(Vector3 pos, bool isDisableUpgrade = false)
+    {
+        upgradeCanvas.SetActive(true);
+        upgradeCanvas.transform.position = pos;
+        buttonUpgrade.interactable = !isDisableUpgrade;
+    }
+
+    void HideUpgradeUI()
+    {
+        upgradeCanvas.SetActive(false);
+    }
+
+    public void OnUpgradeButtonDown()
+    {
+
+    }
+
+    public void OnDestoryButtonDown()
+    {
+
     }
 }
