@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
     public int damage = 50;
-    public float speed = 40;
+    public float speed = 60;
     public GameObject explosionEffectPrefab;
 
     private Transform target;
@@ -23,6 +23,12 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+
         transform.LookAt(target.position);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }

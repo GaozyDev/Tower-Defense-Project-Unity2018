@@ -105,3 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 17.5
+  hp: 150
+  explosionEffect: {fileID: 4158882907049630856, guid: b120f6ad2a037244b846e78573e876d2,
+    type: 3}

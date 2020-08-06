@@ -14,9 +14,19 @@ public class BuildManager : MonoBehaviour
     public Text standardMoneyText;
     public Text moneyText;
     public Animator moneyAnimator;
+    private int money = 1000;
+
+    private static BuildManager _instance;
 
     private TurretData selectedTurretData;
-    private int money = 1000;
+
+    public static BuildManager Ins(){
+        return _instance;
+    }
+    
+	protected virtual void Awake() {
+		_instance = this;
+	}
 
     void Start()
     {
@@ -82,7 +92,7 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    void ChangeMoney(int change = 0)
+    public void ChangeMoney(int change = 0)
     {
         money += change;
         moneyText.text = "￥" + money;
