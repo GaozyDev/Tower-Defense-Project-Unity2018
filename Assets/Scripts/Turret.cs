@@ -5,12 +5,12 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
 
-    public List<GameObject> enemys = new List<GameObject>();
     public float attackRateTime = 1;
     public GameObject bulletPrefab;
     public Transform firePosition;
     public Transform head;
 
+    private List<GameObject> enemys = new List<GameObject>();
     private float timer = 0;
 
     void Start()
