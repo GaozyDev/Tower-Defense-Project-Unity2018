@@ -17713,6 +17713,105 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fdb732e2dc0991439bf2194e4971e2e, type: 3}
+--- !u!1001 &2001152290044789717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1144221359942479622, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842000617, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842491081, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_Name
+      value: LaserTurretUpgraded
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842491081, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842491081, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842491083, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133290225842491085, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308795088474220816, guid: 8df53bd77f12bf548bc9f248ebe60bce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8df53bd77f12bf548bc9f248ebe60bce, type: 3}
 --- !u!1001 &8495177314163403145
 PrefabInstance:
   m_ObjectHideFlags: 0
