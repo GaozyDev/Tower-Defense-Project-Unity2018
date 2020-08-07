@@ -10,9 +10,10 @@ public class MapCube : MonoBehaviour
     public GameObject buildEffect;
     [HideInInspector]
     public bool isUpgraded = false;
-
+    [HideInInspector]
+    public TurretData turretData;
+    
     private Renderer _renderer;
-    private TurretData turretData;
 
     void Start()
     {
@@ -34,14 +35,14 @@ public class MapCube : MonoBehaviour
         isUpgraded = true;
         turretGo = GameObject.Instantiate(turretData.turretUpgradedPrefab, transform.position, Quaternion.identity);
         GameObject effect = GameObject.Instantiate(buildEffect, transform.position, Quaternion.identity);
-         Destroy(effect, 1.5f);
+        Destroy(effect, 1.5f);
     }
 
     public void DestroyTurret()
     {
         Destroy(turretGo);
         GameObject effect = GameObject.Instantiate(buildEffect, transform.position, Quaternion.identity);
-         Destroy(effect, 1.5f);
+        Destroy(effect, 1.5f);
         isUpgraded = false;
         turretGo = null;
         turretData = null;

@@ -129,8 +129,16 @@ public class BuildManager : MonoBehaviour
 
     public void OnUpgradeButtonDown()
     {
-        selectedMapCube.UpgradeTurret();
-        StartCoroutine(HideUpgradeUI());
+        if (money >= selectedMapCube.turretData.costUpgraded)
+        {
+            ChangeMoney(-selectedMapCube.turretData.costUpgraded);
+            selectedMapCube.UpgradeTurret();
+            StartCoroutine(HideUpgradeUI());
+        }
+        else
+        {
+            moneyAnimator.SetTrigger("Flicker");
+        }
     }
 
     public void OnDestoryButtonDown()
