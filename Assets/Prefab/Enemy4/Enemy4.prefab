@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  hp: 150
+  hp: 600
   explosionEffect: {fileID: 4158882907049630856, guid: 57213fbcad1c9fb4d889b6406513cba7,
     type: 3}
   money: 300

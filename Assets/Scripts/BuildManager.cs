@@ -20,7 +20,8 @@ public class BuildManager : MonoBehaviour
     private int money = 1000;
     private static BuildManager _instance;
     private TurretData selectedTurretData;
-    private GameObject selectedTurretGo;
+    private MapCube selectedMapCube;
+    private Animator upgradeCanvasAnimator;
 
     public static BuildManager Ins()
     {
@@ -37,6 +38,7 @@ public class BuildManager : MonoBehaviour
         laserMoneyText.text = laserTurretData.cost.ToString();
         missileMoneyText.text = missileTurretData.cost.ToString();
         standardMoneyText.text = standardTurretData.cost.ToString();
+        upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
     }
 
     void Update()
@@ -56,7 +58,7 @@ public class BuildManager : MonoBehaviour
                         if (money >= selectedTurretData.cost)
                         {
                             ChangeMoney(-selectedTurretData.cost);
-                            mapCube.BuildTurret(selectedTurretData.turretPrefab);
+                            mapCube.BuildTurret(selectedTurretData);
                         }
                         else
                         {
@@ -65,13 +67,13 @@ public class BuildManager : MonoBehaviour
                     }
                     else if (mapCube.turretGo != null)
                     {
-                        if (mapCube.turretGo == selectedTurretGo && upgradeCanvas.activeInHierarchy)
+                        if (mapCube == selectedMapCube && upgradeCanvas.activeInHierarchy)
                         {
-                            HideUpgradeUI();
+                            StartCoroutine(HideUpgradeUI());
                         }
                         else
                         {
-                            selectedTurretGo = mapCube.turretGo;
+                            selectedMapCube = mapCube;
                             ShowUpgradeUI(mapCube.transform.position, mapCube.isUpgraded);
                         }
                     }
@@ -112,23 +114,28 @@ public class BuildManager : MonoBehaviour
 
     void ShowUpgradeUI(Vector3 pos, bool isDisableUpgrade = false)
     {
+        upgradeCanvas.SetActive(false);
         upgradeCanvas.SetActive(true);
         upgradeCanvas.transform.position = pos;
         buttonUpgrade.interactable = !isDisableUpgrade;
     }
 
-    void HideUpgradeUI()
+    IEnumerator HideUpgradeUI()
     {
+        upgradeCanvasAnimator.SetTrigger("hide");
+        yield return new WaitForSeconds(0.3f);
         upgradeCanvas.SetActive(false);
     }
 
     public void OnUpgradeButtonDown()
     {
-
+        selectedMapCube.UpgradeTurret();
+        StartCoroutine(HideUpgradeUI());
     }
 
     public void OnDestoryButtonDown()
     {
-
+        selectedMapCube.DestroyTurret();
+        StartCoroutine(HideUpgradeUI());
     }
 }
